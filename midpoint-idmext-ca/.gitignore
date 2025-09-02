@@ -1,0 +1,9 @@
+*.pem
+*.ini
+*.cert.pem
+*.key.pem
+*.cert
+*.key
+*.p12
+*.log
+*.json

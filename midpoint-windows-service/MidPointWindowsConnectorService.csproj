@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+	<StartupObject>MidPointWindowsConnectorService.Controller.Program</StartupObject>
+    <UserSecretsId>8677a64a-d30f-4f38-bcb6-d6de1e1ce9b1</UserSecretsId>
+    <RunAnalyzersDuringBuild>False</RunAnalyzersDuringBuild>
+    <RunAnalyzersDuringLiveAnalysis>False</RunAnalyzersDuringLiveAnalysis>
+  </PropertyGroup>
+
+  <ItemGroup>
+	<PackageReference Include="BouncyCastle.Cryptography" Version="2.4.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.1" />
+	<PackageReference Include="Microsoft.Extensions.Hosting.WindowsServices" Version="8.0.1" />
+	<PackageReference Include="Microsoft.Extensions.Logging.EventLog" Version="8.0.1" />
+	<PackageReference Include="NetMQ" Version="4.0.1.13" />
+	<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+	<PackageReference Include="System.DirectoryServices" Version="8.0.0" />
+	<PackageReference Include="System.DirectoryServices.AccountManagement" Version="8.0.1" />
+	<PackageReference Include="System.Drawing.Common" Version="8.0.10" />
+	<PackageReference Include="System.Formats.Asn1" Version="8.0.1" />
+	<PackageReference Include="System.Security.Cryptography.Xml" Version="8.0.2" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,4 @@
+zmq
+psycopg
+psycopg2-binary
+cryptography
