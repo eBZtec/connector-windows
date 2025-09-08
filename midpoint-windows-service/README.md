@@ -1,35 +1,35 @@
 # midpoint-windows-service
 
-Serviço Windows nativo em C#, que inicia fila local ZeroMQ para receber as chamadas do conector instalado no MidPoint.
+Native Windows service in C#, which starts a local ZeroMQ queue to receive calls from the connector installed in MidPoint.
 
-## Requisitos para build
+## Build Requirements
 
-- **.NET SDK**: https://dotnet.microsoft.com/pt-br/download
-    - Verifique a instalação com o comando `dotnet --version` no `cmd`
+- **.NET SDK**: https://dotnet.microsoft.com/en-us/download  
+    - Verify the installation with the command `dotnet --version` in `cmd`
 
 - **NSIS**: https://nsis.sourceforge.io/Download
 
 ## Build
 
-1. Navegue até a pasta `midpoint-windows-service\`
+1. Navigate to the folder `midpoint-windows-service\`
 
-2. Abra o `cmd` e execute:
+2. Open `cmd` and run:
 
     `dotnet build MidPointWindowsConnectorService.sln --configuration Release`
 
-3. Execute o arquivo `Installer.nsi`
+3. Run the file `Installer.nsi`
 
-## Instalação
+## Installation
 
-1. Abra o `cmd` com privilégios administrativos e execute:
+1. Open `cmd` with administrative privileges and run:
 
-    `MidPointWindowsConnectorServiceSetup.exe /DCA_PROTOCOL="tcp://" /DCA_HOST=host /DCA_PORT=porta /DSERVICE_PORT=porta`
+    `MidPointWindowsConnectorServiceSetup.exe /DCA_PROTOCOL="tcp://" /DCA_HOST=host /DCA_PORT=port /DSERVICE_PORT=port`
 
-2. Para instalar silenciosamente:
+2. To install silently:
 
-    `MidPointWindowsConnectorServiceSetup.exe /DCA_PROTOCOL="tcp://" /DCA_HOST=host /DCA_PORT=porta /DSERVICE_PORT=porta /S`
+    `MidPointWindowsConnectorServiceSetup.exe /DCA_PROTOCOL="tcp://" /DCA_HOST=host /DCA_PORT=port /DSERVICE_PORT=port /S`
 
-3. Para desinstalar:
+3. To uninstall:
 
-    - Navegue até `C:\Program Files (x86)\eBZ Tecnologia\MidPoint Windows Connector Service`
-    - Execute o arquivo `Ùninstall.exe` ou via `cmd` com o comando `Uninstall.exe /S`
+    - Navigate to `C:\Program Files (x86)\eBZ Tecnologia\MidPoint Windows Connector Service`
+    - Run the file `Uninstall.exe` or via `cmd` with the command `Uninstall.exe /S`
